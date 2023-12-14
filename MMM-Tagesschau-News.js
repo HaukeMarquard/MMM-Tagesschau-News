@@ -1,17 +1,24 @@
 Module.register("MMM-Tagesschau-News", {
-  defaults: {},
+  defaults: {
+    updateInterval: 1000 * 60 * 60, // every hour
+  },
   start: function () {
     this.news = [{ title: "Loading..." }];
     this.index = 0;
     setInterval(() => {
       this.index = (this.index + 1) % this.news.length;
       this.updateDom();
-    }, 5000);
+    }, 10000);
     this.getNews();
   },
   getDom: function () {
     var wrapper = document.createElement("div");
-    wrapper.innerHTML = `<h2>${this.news[this.index].title}</h2>`;
+    const header = document.createElement("h2");
+    header.innerHTML = `${this.news[this.index].title}`;
+    const content = document.createElement("p");
+    content.innerHTML = `${this.news[this.index].firstSentence}`;
+    wrapper.appendChild(header);
+    wrapper.appendChild(content);
     return wrapper;
   },
   socketNotificationReceived: function (notification, payload) {
