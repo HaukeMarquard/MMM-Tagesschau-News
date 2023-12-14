@@ -33,7 +33,7 @@ Module.register("MMM-Tagesschau-News", {
   },
   getDom: function () {
     var container = document.createElement("div");
-    container.innerText = "hihihi";
+    container.innerText = this.textArray[this.currentIndex];
     container.id = "tagesschau_container";
     return container;
   },
