@@ -15,5 +15,3 @@ Module.register("MMM-Tagesschau-News", {
     return wrapper;
   },
 });
-  
-});
