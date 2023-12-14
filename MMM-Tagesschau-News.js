@@ -38,6 +38,7 @@ Module.register("MMM-Tagesschau-News", {
     return container;
   },
   showNextText: function () {
+    Log.log("showNextText wird aufgerufen");
     let textElement = document.getElementById("tagesschau_container");
 
     if (this.currentIndex < this.textArray.length) {
