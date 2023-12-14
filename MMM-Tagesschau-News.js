@@ -1,4 +1,4 @@
-Module.register("MMM-Tomorrow-Weather", {
+Module.register("MMM-Tagesschau-News", {
   defaults: {
     updateInterval: 10 * 60 * 1000, // every 10 minutes
     text: "Tomorrow's Weather",
@@ -16,7 +16,7 @@ Module.register("MMM-Tomorrow-Weather", {
     this.showNextText();
   },
   getStyles: function () {
-    return ["MMM-Tomorrow-Weather.css"];
+    return ["MMM-Tagesschau-News.css"];
   },
   getWeather: function () {
     this.sendSocketNotification("GET_WEATHER", {

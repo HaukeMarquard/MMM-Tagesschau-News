@@ -2,10 +2,10 @@
   "name": "mmm-tagesschau-news",
   "version": "1.0.0",
   "description": "A module for MagicMirror 2 displaying News from the German Tagesschau",
-  "main": "MMM-Tomorrow-Weather.js",
+  "main": "MMM-Tagesschau-News.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HaukeMarquard/MMM-Tagesschaue-News"
+    "url": "git+https://github.com/HaukeMarquard/MMM-Tagesschau-News"
   },
   "keywords": [
     "magic",
