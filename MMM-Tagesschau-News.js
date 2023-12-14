@@ -13,12 +13,20 @@ Module.register("MMM-Tagesschau-News", {
   },
   getDom: function () {
     var wrapper = document.createElement("div");
-    wrapper.style.width = "400px";
+    wrapper.style.width = "800px";
     wrapper.style.backgroundColor = "red";
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "center";
+
     const header = document.createElement("h2");
     header.innerHTML = `${this.news[this.index].title}`;
+    header.style.textAlign = "center";
+
     const content = document.createElement("p");
     content.innerHTML = `${this.news[this.index].firstSentence}`;
+    content.style.textAlign = "center";
+
     wrapper.appendChild(header);
     wrapper.appendChild(content);
     return wrapper;
