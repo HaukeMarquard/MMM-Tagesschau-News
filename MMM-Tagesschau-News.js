@@ -11,21 +11,23 @@ Module.register("MMM-Tagesschau-News", {
     }, 10000);
     this.getNews();
   },
+  getStyles: function () {
+    return ["MMM-Tagesschau-News.css"];
+  },
   getDom: function () {
     var wrapper = document.createElement("div");
-    wrapper.style.width = "1200px";
-    wrapper.style.backgroundColor = "red";
-    wrapper.style.display = "flex";
-    wrapper.style.flexDirection = "column";
-    wrapper.style.alignItems = "center";
+    wrapper.classList.add("tagesschau_news");
+    wrapper.classList.add("container");
 
     const header = document.createElement("h2");
     header.innerHTML = `${this.news[this.index].title}`;
-    header.style.textAlign = "center";
+    header.classList.add("tagesschau_news");
+    header.classList.add("title");
 
     const content = document.createElement("p");
     content.innerHTML = `${this.news[this.index].firstSentence}`;
-    content.style.textAlign = "center";
+    content.classList.add("tagesschau_news");
+    content.classList.add("content");
 
     wrapper.appendChild(header);
     wrapper.appendChild(content);
