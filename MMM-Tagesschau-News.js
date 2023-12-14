@@ -1,10 +1,7 @@
 Module.register("MMM-Tagesschau-News", {
-  defaults: {
-    texte: ["Tagesschau", "Tagesthemen", "Nachtmagazin"],
-    index: 0,
-  },
+  defaults: {},
   start: function () {
-    this.news = [];
+    this.news = ["Tagesschau", "Tagesthemen", "Nachtmagazin"];
     this.index = 0;
     setInterval(() => {
       this.index = (this.index + 1) % this.news.length;
