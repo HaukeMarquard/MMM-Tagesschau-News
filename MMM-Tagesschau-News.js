@@ -39,19 +39,11 @@ Module.register("MMM-Tagesschau-News", {
   },
   showNextText: function () {
     Log.log("showNextText wird aufgerufen");
-    let textElement = document.getElementById("tagesschau_container");
 
     if (this.currentIndex < this.textArray.length) {
-      // Aktuellen Text ausblenden
-      textElement.style.opacity = 0;
-
       setTimeout(function () {
-        // Nächsten Text einblenden
-        textElement.innerHTML = this.textArray[this.currentIndex];
-        textElement.style.opacity = 1;
-
         this.currentIndex++;
-
+        this.updateDom();
         // Rufe die Funktion erneut auf, nach einer gewissen Zeit (z.B. 5000 ms für 5 Sekunden)
         setTimeout(this.showNextText, 5000);
       }, 1000); // 1000 ms für 1 Sekunde Ausblendeffekt
