@@ -3,11 +3,7 @@ var axios = require("axios");
 const Log = require("logger");
 
 module.exports = NodeHelper.create({
-  start: function () {
-    console.log("Starting node helperrrr: " + this.name);
-    console.log("Hihihi");
-    Log.log("Starting node helperrrriiirrrr: " + this.name);
-  },
+  start: function () {},
   get_news: function (payload) {
     var that = this;
     // this.url = `https://api.tomorrow.io/v4/weather/forecast?location=${payload.lat},${payload.lon}&apikey=${payload.api_key}`
