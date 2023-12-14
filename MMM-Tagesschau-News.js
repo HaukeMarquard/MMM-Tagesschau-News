@@ -42,12 +42,12 @@ Module.register("MMM-Tagesschau-News", {
 
     if (this.currentIndex < this.textArray.length) {
       // Aktuellen Text ausblenden
-      this.textElement.style.opacity = 0;
+      textElement.style.opacity = 0;
 
       setTimeout(function () {
         // Nächsten Text einblenden
-        this.textElement.innerHTML = this.textArray[this.currentIndex];
-        this.textElement.style.opacity = 1;
+        textElement.innerHTML = this.textArray[this.currentIndex];
+        textElement.style.opacity = 1;
 
         this.currentIndex++;
 
