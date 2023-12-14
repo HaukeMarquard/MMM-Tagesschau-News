@@ -13,7 +13,7 @@ Module.register("MMM-Tagesschau-News", {
   },
   getDom: function () {
     var wrapper = document.createElement("div");
-    wrapper.style.width = "800px";
+    wrapper.style.width = "1200px";
     wrapper.style.backgroundColor = "red";
     wrapper.style.display = "flex";
     wrapper.style.flexDirection = "column";
