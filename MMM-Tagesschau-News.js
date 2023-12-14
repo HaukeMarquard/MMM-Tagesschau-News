@@ -13,6 +13,8 @@ Module.register("MMM-Tagesschau-News", {
   },
   getDom: function () {
     var wrapper = document.createElement("div");
+    wrapper.style.width = "100%";
+    wrapper.style.backgroundColor = "red";
     const header = document.createElement("h2");
     header.innerHTML = `${this.news[this.index].title}`;
     const content = document.createElement("p");
