@@ -10,6 +10,7 @@ Module.register("MMM-Tagesschau-News", {
       this.updateDom();
     }, 10000);
     this.getNews();
+    this.sheduleUpdate();
   },
   getStyles: function () {
     return ["MMM-Tagesschau-News.css"];
